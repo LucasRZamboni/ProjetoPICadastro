@@ -1,0 +1,106 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+}
+
+.container-principal {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-principal .cartao {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.container-principal .cartao .card {
+    height: 300px;
+    width: 35%;
+    max-width: 40%;
+    padding: 0;
+    box-shadow: 0 0 15px black;
+}
+
+.container-principal .cartao .card .card-body {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-principal .cartao .card .card-body .text {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.container-principal .cartao .card .card-body .text ul {
+    width: 90%;
+    padding-left: 5px;
+}
+
+.container-principal .cartao .card .card-body .text ul small {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.container-principal .cartao .card .card-body .text ul li {
+    width: 100%;
+    padding: 0;
+    font-weight: 300;
+}
+
+.container-principal .cartao .card .card-body .links {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+}
+
+.container-principal .cartao .card .card-body .links a {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-principal .cartao .card .card-body .links a button {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.container-principal .cartao .card .card-body .links a button ion-icon {
+    font-size: 30px;
+}

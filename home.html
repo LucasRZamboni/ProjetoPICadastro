@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenHouse - Home</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/cdn/_bootswatch.scss">
+  <link rel="stylesheet" href="css/cdn/_variables.scss">
+  <link rel="stylesheet" href="css/cdn/bootstrap.css">
+  <link rel="stylesheet" href="css/cdn/bootstrap.min.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body onload="verificaLogado()">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <a class="navbar-brand text-light" href="home.html">OH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="cadInquilinos.html">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="imoveis.html">Imóveis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="sobre.html">Sobre</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-nav ml-auto imagem">
+      <div id="imagemUsuario"></div>
+      <button class="btn btn-outline-light" type="button" onclick="logoutFirebase()">
+        <ion-icon name="log-out-outline" class="sair"></ion-icon> Sair
+      </button>
+    </div>
+  </nav>
+
+  <!-- https://wallpapersafari.com/w/hSReaw -->
+  <div class="divisor"></div>
+
+  <!-- Conteúdo da página -->
+  <section class="carrossel">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="imagem-casa" src="images/casa1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa4.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa5.jpg" class="d-block w-100" alt="...">
+        </div>
+        <!-- <div class="carousel-item">
+        <img class="imagem-casa" src="images/house6.jpg" class="d-block w-100" alt="...">
+      </div> -->
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa7.jpg" class="d-block w-100" alt="...">
+        </div>
+        <!-- <div class="carousel-item">
+        <img class="imagem-casa" src="images/casa8.jpg" class="d-block w-100" alt="...">
+      </div> -->
+        <div class="carousel-item">
+          <img class="imagem-casa" src="images/casa9.jpg" class="d-block w-100" alt="...">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </section>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  <!-- Carregando os scripts do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+  <!-- Carregamento dos scripts do projeto-->
+  <script src="js/firebase/firebase.js"></script>
+  <script src="js/firebase/authentication.js"></script>
+  <script src="js/util/alerta.js"></script>
+</body>
+
+</html>

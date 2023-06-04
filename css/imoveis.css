@@ -1,0 +1,101 @@
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+section.casas {
+  align-items: center;
+  justify-content: center;
+  gap: 1.5%;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+section.aluguel {
+  gap: 1.5%;
+  flex-wrap: wrap;
+}
+
+section.apartamentos {
+  /* align-items: center;
+  justify-content: center; */
+  gap: 1.5%;
+  flex-wrap: wrap;
+}
+
+section.precos {
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 31%;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  margin-top: 20px;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-cartao {
+  width: 90%;
+  height: 300px;
+}
+
+.topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.topo button {
+  color: rgb(255, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+  box-shadow: 0 0 10px black;
+}
+
+.topo button ion-icon {
+  font-size: 30px;
+}
+
+.navbar {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+}
+
+h2 {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px black;
+}
+
+.tabela {
+  width: 100%;
+  padding: 0 30px 0 30px;
+  margin-top: 30px;
+}

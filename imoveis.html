@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenHouse - Imóveis</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/cdn/_bootswatch.scss" />
+  <link rel="stylesheet" href="css/cdn/_variables.scss" />
+  <link rel="stylesheet" href="css/cdn/bootstrap.css" />
+  <link rel="stylesheet" href="css/cdn/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="css/imoveis.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body onload="verificaLogado()" id="inicio">
+  <nav class="navbar navbar-expand-lg bg-primary col-md-12" data-bs-theme="dark">
+    <a class="navbar-brand text-light" href="home.html">OH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="cadInquilinos.html">Cadastro</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
+            aria-haspopup="true" aria-expanded="false">Imóveis</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#casas">Casas</a>
+            <a class="dropdown-item" href="#aluguel"> Aluguel</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#apartamentos">Apartamentos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#precos">Preços</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="sobre.html">Sobre</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-nav ml-auto imagem">
+      <div id="imagemUsuario"></div>
+      <button class="btn btn-outline-light" type="button" onclick="logoutFirebase()">
+        <ion-icon name="log-out-outline" class="sair"></ion-icon> Sair
+      </button>
+    </div>
+  </nav>
+
+  <!-- https://wallpapersafari.com/w/hSReaw -->
+
+  <!-- Conteúdo da página -->
+
+  <div class="container-principal">
+    <a href="#inicio" class="topo"><button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
+        title="Topo">
+        <ion-icon name="arrow-up-outline"></ion-icon></button></a>
+    <section class="casas" id="casas">
+      <div class="card col-md-4">
+        <h3 class="card-header col-12">Venda</h3>
+        <img src="images/casa1.jpg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa com espaço gourmet, piscina externa, garagem para 3 carros e com espaço para mais.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">3 Garagens</li>
+          <li class="list-group-item">Espaço Gourmet</li>
+          <li class="list-group-item">2000m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4">
+        <h3 class="card-header col-12">Venda</h3>
+        <img src="images/casa2.png" alt="imagem casa 2" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa com piscina externa e jacuzzi, garagem grande e com sala integrada à piscina.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">Jacuzzi</li>
+          <li class="list-group-item">Sala Integrada</li>
+          <li class="list-group-item">2300m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4">
+        <h3 class="card-header col-12">Venda</h3>
+        <img src="images/casa3.jpg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa com piscina e cascata, academia, mezanino, garagem para 2 carros, campo de futebol.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">Piscina com cascata</li>
+          <li class="list-group-item">Campo de futebol</li>
+          <li class="list-group-item">2500m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+    </section>
+    <section class="aluguel" id="aluguel">
+      <h2 class="col-md-12 text-primary">Aluguel</h2>
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Aluguel</h3>
+        <img src="images/casa7.jpg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa com ambiente de lazer, deck, lago particular, área verde completa e piscina externa.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">3 Garagens</li>
+          <li class="list-group-item">Espaço Gourmet</li>
+          <li class="list-group-item">3100m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Aluguel</h3>
+        <img src="images/casa9.jpg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa com pé direito triplo, campo verde, jardim e garagem para 6 carros.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">3 Garagens</li>
+          <li class="list-group-item">Espaço Gourmet</li>
+          <li class="list-group-item">2500m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Aluguel</h3>
+        <img src="images/casa4.png" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Casa de praia, varanda com vista para o mar e de fácil acesso à praia.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">3 Garagens</li>
+          <li class="list-group-item">Espaço Gourmet</li>
+          <li class="list-group-item">1100m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+    </section>
+    <section class="apartamentos" id="apartamentos">
+
+      <h2 class="col-md-12 text-primary">APARTAMENTOS</h2>
+
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Venda</h3>
+        <img src="images/apartamento1.png" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Apartamento duplex, área externa com  deck e jacuzzi, lareira e bar externo.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">Duplex</li>
+          <li class="list-group-item">Jacuzzi</li>
+          <li class="list-group-item">230m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Aluguel</h3>
+        <img src="images/apartamento2.jpg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Apartamento com varanda e sala de estar ampla, iluminação natural e sala integrada com cozinha.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">Varanda</li>
+          <li class="list-group-item">Sala de estar ampla</li>
+          <li class="list-group-item">250m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+      <div class="card col-md-4 mt-3 mb-3">
+        <h3 class="card-header col-12">Aluguel</h3>
+        <img src="images/apartamento3.jpeg" alt="imagem casa 1" class="imagem-cartao">
+        <div class="card-body">
+          <p class="card-text">
+            Apartamento com sala de TV, jogos, leitura, sala de estar e sala de jantar.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush col-12">
+          <li class="list-group-item">4 salas</li>
+          <li class="list-group-item">Sala de jantar</li>
+          <li class="list-group-item">220m</li>
+        </ul>
+        <div class="card-body">
+          <a href="#">Ver preço</a>
+        </div>
+      </div>
+    </section>
+    <section class="precos" id="precos">
+      <h2 class="col-md-12 text-primary">NOSSOS PREÇOS</h2>
+      <div class="tabela">
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Tipo</th>
+              <th scope="col">Tamanho</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Aluguel/Venda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>2000m</td>
+              <td>R$ 2.000.000,00</td>
+              <td>Venda</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>2300m</td>
+              <td>R$ 2.500.000,00</td>
+              <td>Venda</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>2500m</td>
+              <td>R$ 3.500.000,00</td>
+              <td>Venda</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>3100m</td>
+              <td>R$ 500.000,00</td>
+              <td>Aluguel</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>2500m</td>
+              <td>R$ 220.000,00</td>
+              <td>Aluguel</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Casa</th>
+              <td>1100m</td>
+              <td>R$ 60.000,00</td>
+              <td>Aluguel</td>
+            </tr>
+            
+            <tr class="table-primary">
+              <th scope="row">Apartamento</th>
+              <td>230m</td>
+              <td>R$ 7.000.000,00</td>
+              <td>Venda</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Apartamento</th>
+              <td>250m</td>
+              <td>R$ 7.500.000,00</td>
+              <td>Venda</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">Apartamento</th>
+              <td>220m</td>
+              <td>R$ 6.400.000,00</td>
+              <td>Venda</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Carregando os scripts do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+  <!-- Carregamento dos scripts do projeto-->
+  <script src="js/firebase/firebase.js"></script>
+  <script src="js/firebase/authentication.js"></script>
+  <script src="js/util/alerta.js"></script>
+</body>
+
+</html>

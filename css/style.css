@@ -1,0 +1,225 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.sair{
+  font-size: 17px;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+@media screen and (max-width: 916px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 30%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 100px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 100px;
+    transform: rotate(0);
+  }
+.content{
+display: none;
+}
+.btn-botao{
+width: 40%;
+}
+.mensagem-alerta {
+  position: absolute;
+  top: 70%;
+  width: 80%;
+}
+}
+
+@media screen and (max-width: 644px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 25%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 100px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 100px;
+    transform: rotate(0);
+  }
+
+}
+
+@media screen and (max-width: 520px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 30%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 50px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 50px;
+    transform: rotate(0);
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 28%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 50px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 50px;
+    transform: rotate(0);
+  }
+  .mensagem-alerta {
+    position: absolute;
+    top: 55%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 28%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 40px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 40px;
+    transform: rotate(0);
+  }
+  .mensagem-alerta {
+    position: absolute;
+    top: 50%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .diagonal-line {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .divisor,
+  .divisor2 {
+    width: 28%;
+    background: black;
+    height: 2px;
+    position: absolute;
+  }
+
+  .divisor {
+    top: 10px;
+    right: 30px;
+    transform: rotate(0);
+  }
+
+  .divisor2 {
+    top: 10px;
+    left: 30px;
+    transform: rotate(0);
+  }
+}

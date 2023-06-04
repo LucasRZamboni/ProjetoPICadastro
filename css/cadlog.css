@@ -1,0 +1,280 @@
+.back-login {
+  /* background-image: url("../images/casa8.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.container__principal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 33px;
+  right: 40px;
+  box-shadow: 0 0 10px black;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: .2s;
+}
+
+.sair ion-icon {
+  margin: 10px;
+  font-size: 35px;
+}
+
+.sair::after {
+  content: 'Sair';
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  font-size: 0px;
+  bottom: 45px;
+  border-radius: 10px;
+  transition: .2s;
+  border: 2px solid rgba(0, 153, 255, 0);
+}
+
+.sair:hover::after {
+  content: 'Sair';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  font-size: 8px;
+  bottom: 45px;
+  background: rgb(53, 135, 165);
+  transition: .2s;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 153, 255);
+}
+
+.row {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+.diagonal-line {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+}
+
+.or-text {
+  font-weight: bold;
+  background: white;
+}
+
+.divisor,
+.divisor2 {
+  width: 200px;
+  background: black;
+  height: 2px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.divisor {
+  top: 140px;
+  transform: rotate(90deg);
+}
+
+.divisor2 {
+  bottom: 140px;
+  transform: rotate(90deg);
+}
+
+.cadastro,
+.login {
+  max-width: 470px;
+  min-width: 260px;
+  position: relative;
+  /* background: wheat; */
+  margin: 10px 0 10px 0;
+}
+
+form {
+  padding: 10px;
+  min-height: 23rem;
+}
+
+form label {
+  color: white;
+}
+
+h2 {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-link {
+  font-size: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn ion-icon {
+  font-size: 20px;
+}
+
+.btn-botao {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.btn-botao .icone-cadastro {
+  font-size: 25px;
+}
+
+.btn-botao .icone-login {
+  font-size: 30px;
+}
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+  /* background: rgba(245, 222, 179, 0.514); */
+}
+
+.input-group-prepend,
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.input-group-text {
+  padding: 10px 12px;
+}
+
+.alert {
+  padding: 3px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+.alert small strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10%;
+}
+
+.alert .fechar {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  padding: 2px;
+}
+
+.alert .error-icone {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.input-icone,
+.input-icone-senha {
+  z-index: 1000;
+}
+
+.input-icone {
+  position: absolute;
+  top: 115px;
+  left: 27px;
+}
+
+.input-icone-senha {
+  position: absolute;
+  top: 14px;
+  left: 5px;
+}
+
+.mensagem-alerta {
+  position: absolute;
+  top: 20px;
+  width: 60%;
+}
+
+/* .modal ion-icon {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.modal h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-body h5 p {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.modal-body img {
+  width: 100%;
+  height: 200px;
+}
+
+.modal-body .erro {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+
+.modal-footer button {
+  display: flex;
+  align-items: center;
+} */

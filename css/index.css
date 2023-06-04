@@ -1,0 +1,26 @@
+.index-classe {
+    /* background-image: url("../images/casa8.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bem-vindo {
+    z-index: 10000;
+}
+
+.imagem {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.imagem-background {
+    max-width: 100%;
+}

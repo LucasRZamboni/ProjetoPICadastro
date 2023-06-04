@@ -141,3 +141,9 @@ td {
 .topo button ion-icon {
   font-size: 30px;
 }
+
+table td:nth-child(7) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

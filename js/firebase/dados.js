@@ -10,7 +10,7 @@ async function obtemDados(collection) {
   await firebase.database().ref(collection).orderByChild('nome').on('value', (snapshot) => {
     tabela.innerHTML = ''
     let cabecalho = tabela.insertRow()
-    cabecalho.className = 'bg-dark text-light'    
+    cabecalho.className = 'bg-primary text-light'
     cabecalho.insertCell().textContent = 'Nome'
     cabecalho.insertCell().textContent = 'Email'
     cabecalho.insertCell().textContent = 'Telefone'
@@ -31,12 +31,12 @@ async function obtemDados(collection) {
       novaLinha.insertCell().innerHTML = '<small>' + item.val().rg + '</small>'
       novaLinha.insertCell().innerHTML = '<small>' + item.val().cpf + '</small>'
       novaLinha.insertCell().innerHTML = '<small>' + item.val().civil + '</small>'
-      novaLinha.insertCell().innerHTML = `<button class='btn btn-sm btn-danger' onclick=remover('${db}','${id}')>❌</button>
-      <button class='btn btn-sm btn-warning' onclick=carregaDadosAlteracao('${db}','${id}')>🔨</button>`
+      novaLinha.insertCell().innerHTML = `<button class='btn btn-sm btn-danger' onclick=remover('${db}','${id}') title="Excluir">✖️</button>
+      <button class='btn btn-sm btn-warning' onclick=carregaDadosAlteracao('${db}','${id}') title="Editar">🔨</button>`
 
     })
     let rodape = tabela.insertRow()
-    rodape.className = 'bg-dark'
+    rodape.className = 'bg-primary'
     rodape.insertCell().colSpan = "6"
     rodape.insertCell().innerHTML = totalRegistros(collection)
 
@@ -84,10 +84,13 @@ function salvar(event, collection) {
   else if (document.getElementById('email').value === '') { alerta('😐 É obrigatório informar o email!', 'warning') }
   else if (document.getElementById('telefone').value === '') { alerta('😵 É obrigatório informar o telefone!', 'warning') }
   else if (document.getElementById('rg').value === '') { alerta('🙁 É obrigatório informar o rg!', 'warning') }
-  else if (document.getElementById('cpf').value === ''){ alerta('😧 É obrigatório informar o cpf!', 'warning') }
+  else if (document.getElementById('cpf').value === '') { alerta('😧 É obrigatório informar o cpf!', 'warning') }
   else if (document.getElementById('estadoCivil').value === '') { alerta('😏 É obrigatório informar o estado civil!', 'warning') }
   else if (document.getElementById('id').value !== '') { alterar(event, collection) }
   else { incluir(event, collection) }
+  setTimeout(function () {
+    location.reload(true);
+  }, 3000);
 }
 
 
@@ -100,7 +103,7 @@ async function incluir(event, collection) {
   const form = document.forms[0];
   const data = new FormData(form);
   //Obtendo os valores dos campos
-  const values = Object.fromEntries(data.entries());  
+  const values = Object.fromEntries(data.entries());
   //Enviando os dados dos campos para o Firebase
   return await firebase.database().ref(collection).push({
     nome: document.getElementById('nome').value,
@@ -108,7 +111,7 @@ async function incluir(event, collection) {
     telefone: document.getElementById('telefone').value,
     rg: document.getElementById('rg').value,
     cpf: document.getElementById('cpf').value,
-    civil: document.getElementById('estadoCivil').value,  
+    civil: document.getElementById('estadoCivil').value,
     usuarioInclusao: {
       uid: usuarioAtual.uid,
       nome: usuarioAtual.displayName,
@@ -141,11 +144,11 @@ async function alterar(event, collection) {
   const values = Object.fromEntries(data.entries());
   //Enviando os dados dos campos para o Firebase
   return await firebase.database().ref().child(collection + '/' + values.id).update({
-    nome: values.nome.toUpperCase(),
-    email: values.email.toLowerCase(),
+    nome: values.nome,
+    email: values.email,
     rg: values.rg,
     cpf: values.cpf,
-    civil: values.civil.toLocaleLowerCase(),  
+    civil: values.civil,
     usuarioInclusao: {
       uid: usuarioAtual.uid,
       nome: usuarioAtual.displayName,

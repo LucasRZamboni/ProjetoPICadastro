@@ -12,6 +12,11 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
+  <!-- Adicione essa tag no cabeçalho do seu HTML -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
   <link rel="stylesheet" href="css/cdn/_bootswatch.scss" />
   <link rel="stylesheet" href="css/cdn/_variables.scss" />
   <link rel="stylesheet" href="css/cdn/bootstrap.css" />
@@ -38,7 +43,7 @@
           <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
             aria-haspopup="true" aria-expanded="false">Imóveis</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#casas">Casas</a>
+            <a class="dropdown-item" href="#venda">Venda</a>
             <a class="dropdown-item" href="#aluguel"> Aluguel</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#apartamentos">Apartamentos</a>
@@ -47,11 +52,11 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="sobre.html">Sobre</a>
+          <a class="nav-link text-light" href="relatorio.html">Relatório</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="relatorio.html">Relatório</a>
-      </li>
+          <a class="nav-link text-light" href="sobre.html">Sobre</a>
+        </li>
       </ul>
     </div>
     <div class="navbar-nav ml-auto imagem">
@@ -70,9 +75,9 @@
     <a href="#inicio" class="topo"><button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
         title="Topo">
         <ion-icon name="arrow-up-outline"></ion-icon></button></a>
-    <section class="casas" id="casas">
+    <section class="casas" id="venda">
       <div class="card col-md-4">
-        <h3 class="card-header col-12">Venda</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa1">Venda</h3>
         <img src="images/casa1.jpg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -84,12 +89,12 @@
           <li class="list-group-item">Espaço Gourmet</li>
           <li class="list-group-item">2000m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="1">Ver preço</a>
         </div>
       </div>
       <div class="card col-md-4">
-        <h3 class="card-header col-12">Venda</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa2">Venda</h3>
         <img src="images/casa2.png" alt="imagem casa 2" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -101,16 +106,17 @@
           <li class="list-group-item">Sala Integrada</li>
           <li class="list-group-item">2300m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="2">Ver preço</a>
+
         </div>
       </div>
       <div class="card col-md-4">
-        <h3 class="card-header col-12">Venda</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa3">Venda</h3>
         <img src="images/casa3.jpg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
-            Casa com piscina e cascata, academia, mezanino, garagem para 2 carros, campo de futebol.
+            Casa com piscina e cascata, academia, garagem para 2 carros, campo de futebol.
           </p>
         </div>
         <ul class="list-group list-group-flush col-12">
@@ -118,15 +124,15 @@
           <li class="list-group-item">Campo de futebol</li>
           <li class="list-group-item">2500m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="3">Ver preço</a>
         </div>
       </div>
     </section>
     <section class="aluguel" id="aluguel">
       <h2 class="col-md-12 text-primary">Aluguel</h2>
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Aluguel</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa4">Aluguel</h3>
         <img src="images/casa7.jpg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -138,12 +144,13 @@
           <li class="list-group-item">Espaço Gourmet</li>
           <li class="list-group-item">3100m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="4">Ver preço</a>
+
         </div>
       </div>
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Aluguel</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa5">Aluguel</h3>
         <img src="images/casa9.jpg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -155,12 +162,13 @@
           <li class="list-group-item">Espaço Gourmet</li>
           <li class="list-group-item">2500m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="5">Ver preço</a>
+
         </div>
       </div>
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Aluguel</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa6">Aluguel</h3>
         <img src="images/casa4.png" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -172,8 +180,8 @@
           <li class="list-group-item">Espaço Gourmet</li>
           <li class="list-group-item">1100m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="6">Ver preço</a>
         </div>
       </div>
     </section>
@@ -182,11 +190,11 @@
       <h2 class="col-md-12 text-primary">APARTAMENTOS</h2>
 
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Venda</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa7">Venda</h3>
         <img src="images/apartamento1.png" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
-            Apartamento duplex, área externa com  deck e jacuzzi, lareira e bar externo.
+            Apartamento duplex, área externa com deck e jacuzzi, lareira e bar externo.
           </p>
         </div>
         <ul class="list-group list-group-flush col-12">
@@ -194,12 +202,13 @@
           <li class="list-group-item">Jacuzzi</li>
           <li class="list-group-item">230m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="7">Ver preço</a>
+
         </div>
       </div>
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Aluguel</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa8">Venda</h3>
         <img src="images/apartamento2.jpg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -211,12 +220,13 @@
           <li class="list-group-item">Sala de estar ampla</li>
           <li class="list-group-item">250m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="8">Ver preço</a>
+
         </div>
       </div>
       <div class="card col-md-4 mt-3 mb-3">
-        <h3 class="card-header col-12">Aluguel</h3>
+        <h3 class="card-header col-12 text-light bg-primary" id="casa9">Venda</h3>
         <img src="images/apartamento3.jpeg" alt="imagem casa 1" class="imagem-cartao">
         <div class="card-body">
           <p class="card-text">
@@ -228,15 +238,16 @@
           <li class="list-group-item">Sala de jantar</li>
           <li class="list-group-item">220m</li>
         </ul>
-        <div class="card-body">
-          <a href="#">Ver preço</a>
+        <div class="card-body ver-preco bg-primary col-12">
+          <a href="#tabela-dados" class="ver-preco-link text-info" data-card-index="9">Ver preço</a>
+
         </div>
       </div>
     </section>
     <section class="precos" id="precos">
       <h2 class="col-md-12 text-primary">NOSSOS PREÇOS</h2>
       <div class="tabela">
-        <table class="table table-dark table-hover">
+        <table class="table table-dark table-hover" id="tabela-dados">
           <thead>
             <tr>
               <th scope="col">Tipo</th>
@@ -246,56 +257,56 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="1">
               <th scope="row">Casa</th>
               <td>2000m</td>
               <td>R$ 2.000.000,00</td>
               <td>Venda</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="2">
               <th scope="row">Casa</th>
               <td>2300m</td>
               <td>R$ 2.500.000,00</td>
               <td>Venda</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="3">
               <th scope="row">Casa</th>
               <td>2500m</td>
               <td>R$ 3.500.000,00</td>
               <td>Venda</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="4">
               <th scope="row">Casa</th>
               <td>3100m</td>
               <td>R$ 500.000,00</td>
               <td>Aluguel</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="5">
               <th scope="row">Casa</th>
               <td>2500m</td>
               <td>R$ 220.000,00</td>
               <td>Aluguel</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="6">
               <th scope="row">Casa</th>
               <td>1100m</td>
               <td>R$ 60.000,00</td>
               <td>Aluguel</td>
             </tr>
-            
-            <tr class="table-primary">
+
+            <tr class="table-primary" data-card-index="7">
               <th scope="row">Apartamento</th>
               <td>230m</td>
               <td>R$ 7.000.000,00</td>
               <td>Venda</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="8">
               <th scope="row">Apartamento</th>
               <td>250m</td>
               <td>R$ 7.500.000,00</td>
               <td>Venda</td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-primary" data-card-index="9">
               <th scope="row">Apartamento</th>
               <td>220m</td>
               <td>R$ 6.400.000,00</td>
@@ -306,6 +317,7 @@
       </div>
     </section>
   </div>
+
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -319,6 +331,7 @@
   <script src="js/firebase/firebase.js"></script>
   <script src="js/firebase/authentication.js"></script>
   <script src="js/util/alerta.js"></script>
+  <script src="js/util/verPreco.js"></script>
 </body>
 
 </html>

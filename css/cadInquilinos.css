@@ -92,6 +92,10 @@ td {
   width: 100%;
 }
 
+table {
+  width: 90%;
+}
+
 .alert {
   display: flex;
   align-items: center;

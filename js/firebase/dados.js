@@ -32,7 +32,7 @@ async function obtemDados(collection) {
       novaLinha.insertCell().innerHTML = '<small>' + item.val().cpf + '</small>'
       novaLinha.insertCell().innerHTML = '<small>' + item.val().civil + '</small>'
       novaLinha.insertCell().innerHTML = `<button class='btn btn-sm btn-danger' onclick=remover('${db}','${id}') title="Excluir">✖️</button>
-      <button class='btn btn-sm btn-warning' onclick=carregaDadosAlteracao('${db}','${id}') title="Editar">🔨</button>`
+      <button class='btn btn-sm btn-warning' onclick=carregaDadosAlteracao('${db}','${id}');incluir(event, 'inquilinos') title="Editar">🔨</button>`
 
     })
     let rodape = tabela.insertRow()

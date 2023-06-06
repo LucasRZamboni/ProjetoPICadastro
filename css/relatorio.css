@@ -38,11 +38,19 @@ h3 {
     justify-content: center;
     margin-top: 50px;
 }
-.botao-relatorio button{
+
+.botao-relatorio button {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.botao-relatorio button img{
+
+.botao-relatorio button img {
     width: 40px;
+}
+
+table td:nth-child(7) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

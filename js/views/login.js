@@ -21,19 +21,11 @@ botaoGoogle.addEventListener('click', (event) => {
 
 
 
-
-
-
-
-
-
-
-
-function login(email, senha){
-    //alert(`O email é ${email} e a senha é ${senha}`)
-    if(email==='ze@uol.com.br' && senha==='123456'){
-        window.location.href = '/menu.html'
-    } else {
-        alerta('Credenciais inválidas!','danger')
-    }
-}
+// function login(email, senha){
+//     //alert(`O email é ${email} e a senha é ${senha}`)
+//     if(email==='ze@uol.com.br' && senha==='123456'){
+//         window.location.href = '/menu.html'
+//     } else {
+//         alerta('Credenciais inválidas!','danger')
+//     }
+// }

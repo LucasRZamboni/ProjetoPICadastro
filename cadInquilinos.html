@@ -20,39 +20,44 @@
 
 <body class="bg-dark" id="inicio" onload="verificaLogado(); obtemDados('inquilinos')">
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <a class="navbar-brand text-light" href="home.html">OH</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-light" href="cadInquilinos.html">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="imoveis.html">Imóveis</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="relatorio.html">Relatório</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="sobre.html">Sobre</a>
-        </li>
-      </ul>
-
-    </div>
-    <div class="navbar-nav ml-auto imagem">
-      <div id="imagemUsuario"></div>
-      <button class="btn btn-outline-light" type="button" onclick="logoutFirebase()">
-        <ion-icon name="log-out-outline" class="sair"></ion-icon> Sair
+    <div class="container-fluid">
+      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="navbar-brand text-light" href="home.html">OH
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="cadInquilinos.html">Cadastro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="imoveis.html">Imóveis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="relatorio.html">Relatório</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="sobre.html">Sobre</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div id="imagemUsuario"></div>
+          <button class="btn btn-outline-light" type="button" onclick="logoutFirebase()">
+            <ion-icon name="log-out-outline" class="sair"></ion-icon> Sair
+          </button>
+        </form>
+      </div>
     </div>
   </nav>
   <a href="#inicio" class="topo"><button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top"
       title="Topo">
       <ion-icon name="arrow-up-outline"></ion-icon></button></a>
-  <div class="container-fluid">
+  <div class="container-fluid-cadastro">
     <div class="row">
       <div class="cadastro">
         <h2>Cadastro de Inquilinos</h2>

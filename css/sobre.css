@@ -13,6 +13,7 @@ body {
     align-items: center;
     z-index: 10000;
     box-shadow: 0 5px 10px white;
+    width: 100%;
 }
 
 .container-principal {

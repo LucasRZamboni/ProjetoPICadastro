@@ -79,20 +79,23 @@ async function carregaDadosAlteracao(db, id) {
 function salvar(event, collection) {
   event.preventDefault() // evita que o formulário seja recarregado
   //Verifica os campos obrigatórios
+
+
   // alert(document.getElementById('estadoCivil').value)
   if (document.getElementById('nome').value === '') { alerta('😑 É obrigatório informar o nome!', 'warning') }
   else if (document.getElementById('email').value === '') { alerta('😐 É obrigatório informar o email!', 'warning') }
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { alerta('😒 O email informado é inválido!', 'warning') }
   else if (document.getElementById('telefone').value === '') { alerta('😵 É obrigatório informar o telefone!', 'warning') }
   else if (document.getElementById('rg').value === '') { alerta('🙁 É obrigatório informar o rg!', 'warning') }
   else if (document.getElementById('cpf').value === '') { alerta('😧 É obrigatório informar o cpf!', 'warning') }
+  else if (!/^([0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2})$/.test(cpf.value)) { alerta('😒 O CPF informado é inválido!', 'warning') }
   else if (document.getElementById('estadoCivil').value === '') { alerta('😏 É obrigatório informar o estado civil!', 'warning') }
   else if (document.getElementById('id').value !== '') { alterar(event, collection) }
   else { incluir(event, collection) }
-  setTimeout(function () {
-    location.reload(true);
-  }, 3000);
+  // setTimeout(function () {
+  //   location.reload(true);
+  // }, 3000);
 }
-
 
 async function incluir(event, collection) {
   let usuarioAtual = firebase.auth().currentUser
@@ -122,7 +125,7 @@ async function incluir(event, collection) {
   })
     .then(() => {
       alerta(`😎 Registro incluído com sucesso!`, 'success')
-      document.getElementById('formCadastro').reset() //limpa o form
+      document.getElementById('cadastroForm').reset() //limpa o form
       //Limpamos o avatar do cliente
       botaoSalvar.innerHTML = '🚑 Salvar'
     })
@@ -159,7 +162,7 @@ async function alterar(event, collection) {
   })
     .then(() => {
       alerta('🤔 Registro alterado com sucesso!', 'success')
-      document.getElementById('formCadastro').reset()
+      document.getElementById('cadastroForm').reset()
       document.getElementById('id').value = ''
       botaoSalvar.innerHTML = '🚑 Salvar'
     })

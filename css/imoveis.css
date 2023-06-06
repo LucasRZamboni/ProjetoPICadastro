@@ -29,6 +29,10 @@ section.precos {
   flex-wrap: wrap;
 }
 
+.navbar {
+  
+}
+
 .card {
   max-width: 31%;
   max-height: 700px;
@@ -84,6 +88,7 @@ section.precos {
   display: flex;
   align-items: center;
   z-index: 10000;
+  width: 100%;
 }
 
 h2 {

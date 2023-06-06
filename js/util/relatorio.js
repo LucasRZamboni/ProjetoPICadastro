@@ -8,18 +8,44 @@
  * @param {string} idElemento - O ID do elemento HTML que contém o conteúdo a ser convertido em PDF.
  */
 function gerarRelatorioPDF(nomeRelatorio, idElemento) {
-    // Obtém a referência do elemento HTML pelo seu ID
-    const element = document.getElementById(idElemento);
-  
-    // Opções de configuração para a geração do PDF
-    var opt = {
-      margin: 0.3,                                     // Margem do documento em polegadas
-      filename: nomeRelatorio + '.pdf',               // Nome do arquivo PDF gerado
-      image: { type: 'jpeg', quality: 0.98 },         // Configurações da imagem (formato e qualidade)
-      html2canvas: { scale: 2 },                      // Configurações do html2canvas (escala)
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // Configurações do jsPDF (unidade, formato e orientação)
-    };
-  
-    // Chama a biblioteca html2pdf para gerar o PDF
-    html2pdf().set(opt).from(element).save();
+  // Obtém a referência do elemento HTML pelo seu ID
+  const element = document.getElementById(idElemento);
+
+  // Encontra a tabela dentro do elemento
+  const table = element.querySelector('table');
+
+  // Obtém todas as células da primeira linha da tabela
+  const headerCells = table.querySelectorAll('tr:first-child th, tr:first-child td');
+
+  // Encontra a coluna que contém o título "Ações"
+  let acoesColumnIndex = -1;
+  headerCells.forEach((cell, index) => {
+    if (cell.textContent.trim() === 'Ações') {
+      acoesColumnIndex = index;
+    }
+  });
+
+  // Remove a coluna "Ações" se encontrada
+  if (acoesColumnIndex !== -1) {
+    const dataRows = table.querySelectorAll('tr:not(:first-child)');
+    headerCells[acoesColumnIndex].remove();
+    dataRows.forEach(row => {
+      row.cells[acoesColumnIndex].remove();
+    });
   }
+
+
+
+  // Opções de configuração para a geração do PDF
+  var opt = {
+    margin: 0.3,                                     // Margem do documento em polegadas
+    filename: nomeRelatorio + '.pdf',               // Nome do arquivo PDF gerado
+    image: { type: 'jpeg', quality: 0.98 },         // Configurações da imagem (formato e qualidade)
+    html2canvas: { scale: 2 },                      // Configurações do html2canvas (escala)
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // Configurações do jsPDF (unidade, formato e orientação)
+  };
+
+  // Chama a biblioteca html2pdf para gerar o PDF
+  html2pdf().set(opt).from(element).save();
+
+}

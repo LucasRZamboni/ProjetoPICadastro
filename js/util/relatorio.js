@@ -42,7 +42,7 @@ function gerarRelatorioPDF(nomeRelatorio, idElemento) {
     filename: nomeRelatorio + '.pdf',               // Nome do arquivo PDF gerado
     image: { type: 'jpeg', quality: 0.98 },         // Configurações da imagem (formato e qualidade)
     html2canvas: { scale: 2 },                      // Configurações do html2canvas (escala)
-    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // Configurações do jsPDF (unidade, formato e orientação)
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' } // Configurações do jsPDF (unidade, formato e orientação)
   };
 
   // Chama a biblioteca html2pdf para gerar o PDF

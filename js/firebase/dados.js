@@ -195,7 +195,7 @@ async function remover(db, id) {
     let dadoExclusao = await firebase.database().ref().child(db + '/' + id)
     dadoExclusao.remove()
       .then(() => {
-        alerta('😓 Registro removido com sucesso!', 'success')
+        alerta('😓 Registro removido com sucesso!', 'warning')
         //Location.reload()
       })
       .catch(error => {

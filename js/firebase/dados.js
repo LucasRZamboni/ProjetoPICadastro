@@ -147,11 +147,21 @@ async function alterar(event, collection) {
   const values = Object.fromEntries(data.entries());
   //Enviando os dados dos campos para o Firebase
   return await firebase.database().ref().child(collection + '/' + values.id).update({
-    nome: values.nome,
-    email: values.email,
-    rg: values.rg,
-    cpf: values.cpf,
-    civil: values.civil,
+  //  nome: values.nome,
+  //  email: values.email,
+  //  rg: values.rg,
+  //  cpf: values.cpf,
+  //  civil: values.civil,
+    
+    //-------------------------------------------------teste
+     nome: document.getElementById('nome').value,
+    email: document.getElementById('email').value,
+    telefone: document.getElementById('telefone').value,
+    rg: document.getElementById('rg').value,
+    cpf: document.getElementById('cpf').value,
+    civil: document.getElementById('estadoCivil').value,
+    
+    
     usuarioInclusao: {
       uid: usuarioAtual.uid,
       nome: usuarioAtual.displayName,
